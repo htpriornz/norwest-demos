@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tony Allnutt Plumbing Ltd | Plumbing in Timaru, South Canterbury</title>
+<meta name="description" content="Tony Allnutt Plumbing Ltd: plumbing services across Timaru and greater South Canterbury. Call 03 688 1613.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f1f33">
+<style>
+  :root {
+    --ink: #0f1f33;        /* deep navy */
+    --ink-2: #1c3350;
+    --text: #1d2733;
+    --muted: #4a5868;      /* 7.4:1 on white */
+    --line: #d9e0e8;
+    --bg: #ffffff;
+    --bg-soft: #f3f6f9;
+    --accent: #ffb020;     /* safety amber, used as a background with navy text (9.9:1) */
+    --accent-dark: #e69500;
+    --focus: #1a73e8;
+    --radius: 14px;
+    --max: 1120px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: var(--ink-2); }
+  h1, h2, h3 { color: var(--ink); line-height: 1.15; margin: 0 0 .5em; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0 0 1em; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  section { padding: 64px 0; }
+  .eyebrow { display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+
+  /* Focus: always visible for keyboard users */
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+  .skip { position: absolute; left: -9999px; top: 8px; background: var(--accent); color: var(--ink); padding: 10px 14px; font-weight: 700; z-index: 100; border-radius: 8px; }
+  .skip:focus { left: 8px; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 12px 22px;
+         border-radius: 999px; font-weight: 700; font-size: 1rem; text-decoration: none; border: 2px solid transparent; cursor: pointer; transition: transform .15s, background .15s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: var(--ink); }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+  .btn-ghost:hover { background: rgba(255,255,255,.1); }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+
+  /* Header */
+  .top { position: sticky; top: 0; z-index: 50; background: rgba(15,31,51,.97); color: #fff; backdrop-filter: saturate(140%) blur(6px); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 800; font-size: 1.05rem; min-width: 0; }
+  .brand span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mark { width: 34px; height: 34px; flex: none; border-radius: 9px; background: var(--accent); display: grid; place-items: center; }
+  .mark svg { width: 20px; height: 20px; }
+  .top nav { display: none; gap: 22px; }
+  .top nav a { color: #dfe7f0; text-decoration: none; font-weight: 600; font-size: .95rem; }
+  .top nav a:hover { color: #fff; }
+  .top .btn { min-height: 44px; padding: 8px 16px; font-size: .95rem; }
+  .top .btn .num { display: none; }
+  @media (min-width: 880px) { .top nav { display: flex; } .top .btn .num { display: inline; } }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; color: #fff; padding: 72px 0 84px;
+          background:
+            radial-gradient(900px 420px at 85% -10%, rgba(255,176,32,.22), transparent 60%),
+            radial-gradient(700px 500px at -10% 110%, rgba(64,140,220,.25), transparent 60%),
+            linear-gradient(160deg, #0f1f33 0%, #16304f 60%, #10243c 100%); }
+  .hero::after { /* subtle blueprint grid */
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .09;
+    background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px);
+    background-size: 40px 40px; mask-image: linear-gradient(180deg, #000 0%, transparent 85%); -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 85%); }
+  .hero .wrap { position: relative; z-index: 1; display: grid; gap: 40px; }
+  .hero h1 { color: #fff; font-size: clamp(2rem, 6.5vw, 3.4rem); font-weight: 800; margin-bottom: 16px; }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.lead { font-size: clamp(1.05rem, 2.4vw, 1.25rem); color: #dbe4ee; max-width: 36ch; }
+  .hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+          color: #fff; padding: 6px 14px; border-radius: 999px; font-size: .88rem; font-weight: 600; margin-bottom: 18px; }
+  .pill svg { width: 16px; height: 16px; }
+  .ticks { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 10px; color: #dbe4ee; font-weight: 600; }
+  .ticks li { display: flex; gap: 10px; align-items: center; }
+  .ticks svg { width: 20px; height: 20px; flex: none; color: var(--accent); }
+  .hero-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.16); border-radius: 20px; padding: 26px; align-self: center; }
+  .hero-card h2 { color: #fff; font-size: 1.25rem; }
+  .hero-card .big { display: block; font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 800; color: #fff; text-decoration: none; margin: 4px 0 6px; word-break: break-word; }
+  .hero-card .small { color: #c3cfdc; font-size: .95rem; margin: 0; }
+  @media (min-width: 880px) { .hero .wrap { grid-template-columns: 1.4fr 1fr; align-items: center; } .hero { padding: 104px 0 112px; } }
+
+  /* Services */
+  .grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+  @media (min-width: 620px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 980px) { .grid.three { grid-template-columns: repeat(3, 1fr); } }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; transition: border-color .15s, box-shadow .15s; }
+  .card:hover { border-color: #b7c4d3; box-shadow: 0 8px 24px rgba(15,31,51,.08); }
+  .card p { color: var(--muted); margin: 0; }
+  .ico { width: 46px; height: 46px; border-radius: 12px; background: var(--bg-soft); color: var(--ink-2); display: grid; place-items: center; margin-bottom: 14px; border: 1px solid var(--line); }
+  .ico svg { width: 24px; height: 24px; }
+  .section-head { max-width: 640px; margin-bottom: 32px; }
+  .section-head p { color: var(--muted); }
+
+  /* Why us */
+  .why { background: var(--bg-soft); }
+  .why-item { display: flex; gap: 16px; align-items: flex-start; }
+  .why-num { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--accent); display: grid; place-items: center; font-weight: 800; }
+  .why-item p { color: var(--muted); margin: 0; }
+
+  /* Area */
+  .area .wrap { display: grid; gap: 32px; }
+  @media (min-width: 880px) { .area .wrap { grid-template-columns: 1fr 1fr; align-items: center; } }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+  .chips li { background: var(--bg-soft); border: 1px solid var(--line); padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: .92rem; color: var(--ink-2); }
+  .map { position: relative; aspect-ratio: 4 / 3; border-radius: 20px; overflow: hidden; border: 1px solid var(--line);
+         background:
+           radial-gradient(circle at 50% 52%, rgba(255,176,32,.35) 0 18%, rgba(255,176,32,.12) 18% 34%, transparent 34%),
+           linear-gradient(115deg, transparent 47%, #c9d6e4 47% 49%, transparent 49%),
+           linear-gradient(20deg, transparent 60%, #c9d6e4 60% 61.5%, transparent 61.5%),
+           linear-gradient(160deg, transparent 30%, #d6e0ea 30% 31%, transparent 31%),
+           repeating-linear-gradient(0deg, #eef3f7 0 38px, #e7edf3 38px 39px),
+           repeating-linear-gradient(90deg, #eef3f7 0 38px, #e7edf3 38px 39px); }
+  .map .pin { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -100%); width: 44px; height: 44px; color: var(--ink); }
+  .map .label { position: absolute; left: 12px; bottom: 12px; right: 12px; background: rgba(255,255,255,.94); border-radius: 10px; padding: 10px 14px; font-size: .9rem; color: var(--text); }
+
+  /* Reviews placeholder */
+  .placeholder-note { display: flex; gap: 12px; align-items: flex-start; background: #fff7e6; border: 2px dashed #c98500; color: #5a3d00; border-radius: var(--radius); padding: 16px 18px; margin-bottom: 22px; font-weight: 600; }
+  .placeholder-note svg { width: 22px; height: 22px; flex: none; margin-top: 2px; }
+  .review-ph { border: 2px dashed #b7c4d3; border-radius: var(--radius); padding: 22px; background: var(--bg-soft); }
+  .review-ph .tag { display: inline-block; font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; background: var(--ink); color: #fff; padding: 3px 9px; border-radius: 6px; margin-bottom: 12px; }
+  .bar { height: 10px; border-radius: 6px; background: #d9e0e8; margin: 8px 0; }
+  .bar.w80 { width: 80%; } .bar.w60 { width: 60%; } .bar.w40 { width: 40%; }
+  .review-ph p { color: var(--muted); font-size: .92rem; margin: 12px 0 0; }
+
+  /* Contact */
+  .contact { background: var(--ink); color: #e6edf5; }
+  .contact h2, .contact h3 { color: #fff; }
+  .contact .wrap { display: grid; gap: 36px; }
+  @media (min-width: 880px) { .contact .wrap { grid-template-columns: 1fr 1.1fr; } }
+  .contact-list { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 14px; }
+  .contact-list li { display: flex; gap: 12px; align-items: center; }
+  .contact-list svg { width: 22px; height: 22px; color: var(--accent); flex: none; }
+  .contact-list a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; word-break: break-word; }
+  form { background: #fff; color: var(--text); border-radius: 20px; padding: 24px; }
+  .field { margin-bottom: 16px; }
+  label { display: block; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+  label .opt { font-weight: 500; color: var(--muted); }
+  input, select, textarea { width: 100%; font: inherit; color: var(--text); background: #fff; border: 2px solid #9aa8b8; border-radius: 10px; padding: 11px 12px; min-height: 48px; }
+  textarea { min-height: 120px; resize: vertical; }
+  input:focus-visible, select:focus-visible, textarea:focus-visible { border-color: var(--focus); outline: 3px solid rgba(26,115,232,.35); outline-offset: 0; }
+  .row2 { display: grid; gap: 16px; }
+  @media (min-width: 520px) { .row2 { grid-template-columns: 1fr 1fr; } }
+  form .btn { width: 100%; }
+  .form-note { font-size: .88rem; color: var(--muted); margin: 12px 0 0; }
+  .form-status { margin-top: 12px; font-weight: 700; color: var(--ink); }
+
+  /* Footer */
+  footer { background: #0a1626; color: #b9c6d4; padding: 28px 0 36px; font-size: .92rem; }
+  footer .wrap { display: grid; gap: 8px; }
+  footer strong { color: #fff; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .demo-flag { color: #ffd27a; font-weight: 700; }
+  .demo-strip { background: #ffd27a; color: #0f1f33; text-align: center; font-size: .88rem; font-weight: 700; padding: 6px 16px; }
+  html { scroll-padding-top: 72px; }
+
+  /* Sticky click-to-call on phones */
+  .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+             background: rgba(15,31,51,.97); box-shadow: 0 -6px 20px rgba(0,0,0,.2); }
+  .callbar .btn { width: 100%; }
+  body { padding-bottom: 76px; }
+  @media (min-width: 880px) { .callbar { display: none; } body { padding-bottom: 0; } }
+
+  /* Very narrow phones (360px and under) */
+  @media (max-width: 380px) {
+    .wrap { padding: 0 16px; }
+    section { padding: 48px 0; }
+    .hero { padding: 52px 0 60px; }
+    .hero .ctas .btn { width: 100%; }
+    .top .btn { padding: 8px 12px; }
+    .brand { font-size: .98rem; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Inline SVG icon sprite (all original, no external assets) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></g></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a9 9 0 1 1 16 0"/><path d="m12 14 4-5"/><circle cx="12" cy="14" r="1.5"/></g></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h4"/></g></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5M2 17l10 5 10-5"/></g></symbol>
+</svg>
+
+<div class="demo-strip" role="note">Demo by Nor&#x27;west Digital for Tony Allnutt Plumbing Ltd. Not their own website.</div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Tony Allnutt Plumbing Ltd, back to top">
+      <span class="mark" aria-hidden="true"><svg style="color:#0f1f33"><use href="#i-tool"/></svg></span>
+      <span>Tony Allnutt Plumbing Ltd</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#area">Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="tel:+6436881613" aria-label="Call Tony Allnutt Plumbing Ltd on 03 688 1613">
+      <svg aria-hidden="true"><use href="#i-phone"/></svg><span>Call</span><span class="num">&nbsp;03 688 1613</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <span class="pill"><svg aria-hidden="true"><use href="#i-pin"/></svg>Timaru, South Canterbury</span>
+        <h1 id="hero-title">Plumber in <em>Timaru, South Canterbury</em></h1>
+        <p class="lead">All plumbing work in Timaru, from dripping taps to drainlaying. Call any time.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="tel:+6436881613"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call 03 688 1613</a>
+          <a class="btn btn-ghost" href="#contact">Request a quote</a>
+        </div>
+        <ul class="ticks">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free consultation and quotes</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Available 24/7</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Local to Timaru</li>
+        </ul>
+      </div>
+      <aside class="hero-card" aria-label="Quick contact">
+        <h2>Need a plumber?</h2>
+        <a class="big" href="tel:+6436881613">03 688 1613</a>
+        <p class="small">Available 24/7</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What we do</span>
+        <h2 id="services-title">Plumbing services</h2>
+        <p>Plumbing work across Timaru and greater South Canterbury.</p>
+      </div>
+      <div class="grid three">
+        <article class="card"><div class="ico" aria-hidden="true"><svg><use href="#i-tool"/></svg></div><h3>Dripping taps and showers</h3><p>Repairs for taps, showers and overflows.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true"><svg><use href="#i-alert"/></svg></div><h3>Burst pipes and leaks</h3><p>Fast attention when water is where it should not be.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true"><svg><use href="#i-house"/></svg></div><h3>Blocked drains</h3><p>Clearing blocked drains and finding the cause.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true"><svg><use href="#i-layers"/></svg></div><h3>Drainlaying</h3><p>New and replacement drains.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true"><svg><use href="#i-gauge"/></svg></div><h3>Spouting and guttering</h3><p>Fixing leaky spouting and guttering.</p></article>
+        <article class="card"><div class="ico" aria-hidden="true"><svg><use href="#i-clipboard"/></svg></div><h3>Bathroom and kitchen alterations</h3><p>Plumbing for bathroom and kitchen changes, plus log fires and shower pressure.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why Tony Allnutt Plumbing Ltd</span>
+        <h2 id="why-title">Why call Tony Allnutt Plumbing Ltd</h2>
+      </div>
+      <div class="grid three">
+        <div class="why-item"><span class="why-num" aria-hidden="true">1</span><div><h3>Free consultation</h3><p>Ring and talk it through. Quotes are free.</p></div></div>
+        <div class="why-item"><span class="why-num" aria-hidden="true">2</span><div><h3>Available 24/7</h3><p>Call any time for urgent plumbing problems.</p></div></div>
+        <div class="why-item"><span class="why-num" aria-hidden="true">3</span><div><h3>All plumbing work</h3><p>One call covers repairs, maintenance and alterations.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="area" id="area" aria-labelledby="area-title">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Service area</span>
+        <h2 id="area-title">Based in Timaru, working across South Canterbury</h2>
+        <p>Based in Timaru, working across South Canterbury.</p>
+        <ul class="chips" aria-label="Suburbs we cover">
+          <li>Timaru</li>
+          <li>South Canterbury</li>
+        </ul>
+      </div>
+      <div class="map" role="img" aria-label="Illustrative map graphic of the Timaru service area. Not a real map.">
+        <svg class="pin" aria-hidden="true"><use href="#i-pin"/></svg>
+        <div class="label"><strong>Timaru</strong> and surrounds. Map placeholder: a live map can go here.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Reviews</span>
+        <h2 id="reviews-title">What customers say</h2>
+      </div>
+      <p class="placeholder-note" role="note">
+        <svg aria-hidden="true"><use href="#i-alert"/></svg>
+        <span>PLACEHOLDER: this demo does not show any reviews. Real customer reviews (for example from Google) would go here, only with the owner's approval.</span>
+      </p>
+      <div class="grid three">
+        <div class="review-ph" aria-hidden="true"><span class="tag">Placeholder</span><div class="bar w80"></div><div class="bar"></div><div class="bar w60"></div><p>Review slot 1</p></div>
+        <div class="review-ph" aria-hidden="true"><span class="tag">Placeholder</span><div class="bar"></div><div class="bar w80"></div><div class="bar w40"></div><p>Review slot 2</p></div>
+        <div class="review-ph" aria-hidden="true"><span class="tag">Placeholder</span><div class="bar w60"></div><div class="bar"></div><div class="bar w80"></div><p>Review slot 3</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow" style="color:#c3cfdc">Contact</span>
+        <h2 id="contact-title">Request a quote</h2>
+        <p>Tell us about the job and we will come back to you. Urgent? Give us a call.</p>
+        <ul class="contact-list">
+          <li><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="sr">Phone: </span><a href="tel:+6436881613">03 688 1613</a></li>
+          <li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:tony@tonyallnuttplumbing.co.nz">tony@tonyallnuttplumbing.co.nz</a></li>
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Timaru, South Canterbury</span></li>
+          <li><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Available 24/7</span></li>
+        </ul>
+      </div>
+      <form id="quote" novalidate aria-describedby="form-note">
+        <div class="row2">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div class="field"><label for="f-email">Email <span class="opt">(optional)</span></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" type="text" autocomplete="address-level2"></div>
+        <div class="field">
+          <label for="f-job">Type of job</label>
+          <select id="f-job" name="job">
+            <option>Dripping taps and showers</option><option>Burst pipes and leaks</option><option>Blocked drains</option>
+            <option>Drainlaying</option><option>Spouting and guttering</option><option>Bathroom and kitchen alterations</option><option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Job details</label><textarea id="f-msg" name="message"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send enquiry</button>
+        <p class="form-note" id="form-note">Demo form: it is not connected and does not send anything.</p>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Tony Allnutt Plumbing Ltd</strong> &middot; Plumbing &middot; Timaru, South Canterbury</div>
+    <div class="demo-flag">Demo prepared by Nor&#x27;west Digital for Tony Allnutt Plumbing Ltd. Not affiliated.</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-primary" href="tel:+6436881613"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call 03 688 1613</a>
+</div>
+
+<script>
+  // Demo only: the form never sends data anywhere.
+  document.getElementById('quote').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('form-status').textContent = 'Demo only: this form is not connected yet, so nothing was sent. Please call instead.';
+  });
+</script>
+</body>
+</html>
